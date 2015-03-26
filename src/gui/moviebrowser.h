@@ -279,7 +279,7 @@ class CMovieBrowser : public CMenuTarget
 
 	private: // Variables
 		//CFBWindow* m_pcWindow;
-		CFrameBuffer * m_pcWindow;
+		CFrameBuffer * framebuffer;
 
 		CListFrame* m_pcBrowser;
 		CListFrame* m_pcLastPlay;
@@ -313,7 +313,7 @@ class CMovieBrowser : public CMenuTarget
 		unsigned int m_currentRecordSelection;
 		unsigned int m_currentPlaySelection;
 		unsigned int m_currentFilterSelection;
- 		unsigned int m_prevBrowserSelection;
+		unsigned int m_prevBrowserSelection;
 		unsigned int m_prevRecordSelection;
 		unsigned int m_prevPlaySelection;
 
@@ -397,7 +397,7 @@ class CMovieBrowser : public CMenuTarget
 		bool delFile_std(CFile& file);
 		int  getMenuRet() { return menu_ret; }
 		int  getMode() { return show_mode; }
-		void  setMode(int mode) { show_mode = mode; }
+		void setMode(int mode) { show_mode = mode; }
 
 	private: //Functions
 		///// MovieBrowser init ///////////////
